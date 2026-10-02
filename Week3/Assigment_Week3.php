@@ -1,8 +1,6 @@
 <?php
 
-// ------------------------------------------------------------------
-// EMBEDDED CSS STYLES FOR ELEGANT PRESENTATION
-// ------------------------------------------------------------------
+
 echo '<style>
     body {
         font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -276,8 +274,7 @@ foreach ($colors as $rowName => $row) {
 }
 echo "</table>";
 
-echo '</div>'; // End Question 2 Section
-
+echo '</div>';
 
 // ==========================================
 // QUESTION 3
@@ -383,7 +380,8 @@ for ($i = 0; $i < $rows; $i++) {
 echo '<div class="result-box">Minimum element is: ' . $minimum . ' (Positions: ' . implode(", ", $minPositions) . ')</div>';
 echo '<div class="result-box">Maximum element is: ' . $maximum . ' (Positions: ' . implode(", ", $maxPositions) . ')</div>';
 
-echo '</div>'; // End Question 3 Section
+echo '</div>'; 
+
 
 
 // ==========================================
@@ -430,7 +428,8 @@ foreach ($students as $id => $student) {
 }
 echo "</table>";
 
-echo '</div>'; // End Question 4 Section
+echo '</div>';
+
 
 
 // ==========================================
@@ -538,6 +537,31 @@ foreach ($transcript as $semester => $courses) {
 }
 echo "</table>";
 
-echo '</div>'; // End Question 5 Section
+echo '</div>'; 
+
+echo '<br><br><br>';
+
+echo '<style>
+.assignment-footer {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 14px 30px;
+    border: 2px solid #a78bfa;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #6d28d9, #db2777);
+    color: #fff;
+    font: 600 16px/1.4 Arial, sans-serif;
+    box-shadow: 0 8px 20px rgba(109, 40, 217, .3);
+    animation: footer-walk 2.4s ease-in-out infinite;
+}
+@keyframes footer-walk {
+    0%, 100% { transform: translateX(-14px) rotate(-1deg); }
+    50% { transform: translateX(14px) rotate(1deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .assignment-footer { animation: none; }
+}
+</style>';
+echo '<footer class="assignment-footer">End of Assignment Week 3.</footer>';
 
 ?>
